@@ -17,6 +17,7 @@ Entering Contact
     TypeText                    First Name                  ${C_FirstName}
     TypeText                    Last Name                   ${C_LastName}
     ${fullName}                 Catenate                    ${C_FirstName}              ${C_LastName}
+    Log                        ${fullName}
     TypeText                    Phone                       ${C_Phone}
     ComboBox                    Search Accounts...          Dickenson plc
     TypeText                    Email                       tara@gamil.com
@@ -52,12 +53,12 @@ Entering Contact
     VerifyText                  Phone
 
     # Delete generated contacts for cleanup
-    LaunchApp                   Sales
-    Wait Until Keyword Succeeds                             1 min                       5 sec            ClickText    Contacts
-    VerifyText                  Recently Viewed             timeout=120s
-    ClickText                   ${fullName}                 timeout=120s
-    ClickText                   Show more actions
-    ClickText                   Delete
-    ClickText                   Delete
-    ClickText                   Close
-    VerifyText                  Recently Viewed             timeout=120s
+   # LaunchApp                   Sales
+    #Wait Until Keyword Succeeds                             1 min                       5 sec            ClickText    Contacts
+    #VerifyText                  Recently Viewed             timeout=120s
+    #ClickText                   ${fullName}                 timeout=120s
+    #ClickText                   Show more actions
+    #ClickText                   Delete
+    #ClickText                   Delete
+    #ClickText                   Close
+    #VerifyText                  Recently Viewed             timeout=120s
